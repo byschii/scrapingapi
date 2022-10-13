@@ -3,6 +3,11 @@ from playwright.sync_api import sync_playwright
 
 import time 
 
+# for proxy
+# browser = await chromium.launch(proxy={
+#  "server": "http://myproxy.com:3128",
+# with ip from https://vpnoverview.com/privacy/anonymous-browsing/free-proxy-servers/
+
 def run_scrape(page_url:str, max_wait:int=10, sleep_time:int=7) -> str:
     with sync_playwright() as playwright:
         # launch the browser
